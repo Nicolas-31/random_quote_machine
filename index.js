@@ -40,7 +40,7 @@ const App = () => {
       <div id="quote-box" className="container pt-5">
         <div className="bg-light p-5">
           <div className="card">
-            <div className="card-header">Motivational Quotes</div>
+            <div className="card-header">Random Quotes Generator</div>
             <div className="card-body">
               {randomQuote ? (
                 <>
