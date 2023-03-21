@@ -37,24 +37,24 @@ const App = () => {
 
   return (
     <div style={{ backgroundColor: color, minHeight: '100vh' }}>
-      <div className="container pt-5">
+      <div id="quote-box" className="container pt-5">
         <div className="bg-light p-5">
           <div className="card">
             <div className="card-header">Motivational Quotes</div>
             <div className="card-body">
               {randomQuote ? (
                 <>
-                  <h5 className="card-title">
+                  <h5 id="author" className="card-title">
                     {randomQuote.author || 'No Author'}
                   </h5>
-                  <p className="card-text">&quot;{randomQuote.text}&quot;</p>
+                  <p id="text" className="card-text">&quot;{randomQuote.text}&quot;</p>
                 </>
               ) : (
                 <h2>Loading</h2>
               )}
 
               <div>
-                <a
+                <a id="tweet-quote"
                   href={
                     'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
                     encodeURIComponent(
@@ -81,7 +81,7 @@ const App = () => {
                   <i className="fab fa-tumblr"></i>
                 </a>
 
-                <button onClick={getNewQuote} className="btn btn-primary float-end">
+                <button id="new-quote" onClick={getNewQuote} className="btn btn-primary float-end">
                   New Quote
                 </button>
               </div>
